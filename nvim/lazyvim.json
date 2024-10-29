@@ -1,7 +1,5 @@
 {
-  "extras": [
-
-  ],
+  "extras": ["lazyvim.plugins.extras.util.startuptime"],
   "news": {
     "NEWS.md": "6520",
     "doc/news.txt": "24450"
