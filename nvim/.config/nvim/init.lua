@@ -1,4 +1,2 @@
-require("sethy.core")
-require("sethy.lazy")
-require("current-theme")
-require("sethy.terminalpop")
+-- bootstrap lazy.nvim, LazyVim and your plugins
+require("config.lazy")

@@ -1,0 +1,33 @@
+# Neovim gitignore for portable dotfiles
+
+# Generated lockfiles - these change frequently and lock to specific commits
+lazy-lock.json
+
+# Installed packages - these auto-install based on mason.lua configuration
+nvim/.config/nvim/mason/
+
+# Generated cache files
+.neoconf.json
+
+# Runtime directories
+undo/
+swap/
+session/
+shada/
+
+# Temporary files
+*.swp
+*.swos
+*~
+
+# Log files
+*.logs
+
+# OS files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db

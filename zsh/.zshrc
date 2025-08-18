@@ -114,4 +114,8 @@ eval "$(jenv init -)"
 
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
+export PATH="/opt/homebrew/opt/coreutils/libexec/gnubin:$PATH"
+
+export PATH="/opt/homebrew/opt/coreutils/libexec/gnubin:$PATH"
 export PATH="/opt/homebrew/opt/rustup/bin:$PATH"

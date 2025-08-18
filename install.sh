@@ -61,7 +61,8 @@ brew install starship
 brew install tree-sitter
 brew install tree
 brew install borders
-
+brew install yazi
+brew install viddy
 # dev things
 brew install node sqlite nvm pyenv jenv
 brew install zoxide exa kubectx kubernetes kube-ps1
@@ -84,18 +85,9 @@ defaults write InitialKeyRepeat -int 15
 # csrutil status
 echo "Installation complete..."
 
-# Clone dotfiles repository
-if [ ! -d "$HOME/dotfiles" ]; then
-  echo "Cloning dotfiles repository..."
-  git clone https://github.com/Sin-cy/dotfiles.git $HOME/dotfiles
-fi
-
-# Navigate to dotfiles directory
-cd $HOME/dotfiles || exit
-
 # Stow dotfiles packages
 echo "Stowing dotfiles..."
-stow -t ~ aerospace karabiner starship tmux zsh
+stow -t ~ karabiner starship tmux sketchybar aerospace ghostty nvim 
 
 # export gnu coreutils to path
 echo 'export PATH="/opt/homebrew/opt/coreutils/libexec/gnubin:$PATH"' >> ~/.zshrc
