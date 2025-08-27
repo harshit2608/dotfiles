@@ -112,10 +112,21 @@ source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 export PATH="$HOME/.jenv/bin:$PATH"
 eval "$(jenv init -)"
 
-
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
 export PATH="/opt/homebrew/opt/coreutils/libexec/gnubin:$PATH"
-
-export PATH="/opt/homebrew/opt/coreutils/libexec/gnubin:$PATH"
 export PATH="/opt/homebrew/opt/rustup/bin:$PATH"
+
+# Print expanded alias before executing any command
+function print_expanded_alias() {
+    local cmd="$1"
+    local first_word=${cmd%% *}
+    local expanded=$(alias "$first_word" 2>/dev/null)
+    if [[ -n "$expanded" ]]; then
+        echo "+ $expanded"
+    fi
+}
+
+autoload -Uz add-zsh-hook
+add-zsh-hook preexec print_expanded_alias
+export PATH="/opt/homebrew/opt/coreutils/libexec/gnubin:$PATH"

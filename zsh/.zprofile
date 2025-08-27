@@ -27,9 +27,8 @@ export ZSH="$HOME/.oh-my-zsh"
 # export ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # ------------FZF--------------
-# Set up fzf key bindings and fuzzy completion
 export FZF_DEFAULT_COMMAND="fd --hidden --strip-cwd-prefix --exclude .git "
-export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+export FZF_CTRL_T_COMMAND="fd --hidden --type d . ~/Desktop ~/Documents ~/Downloads ~/Applications --exclude .git "
 export FZF_ALT_C_COMMAND="fd --type=d --hidden --strip-cwd-prefix --exclude .git"
 
 export FZF_DEFAULT_OPTS="--height 50% --layout=default --border --color=hl:#2dd4bf"
@@ -68,7 +67,6 @@ export PATH
 
 
 # goonF
-export GOPATH=/Users/rapido/go
 export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:$GOROOT/bin
 export GO111MODULE=on

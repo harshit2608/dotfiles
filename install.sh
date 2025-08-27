@@ -63,6 +63,8 @@ brew install tree
 brew install borders
 brew install yazi
 brew install viddy
+brew install uv
+brew install stern
 # dev things
 brew install node sqlite nvm pyenv jenv
 brew install zoxide exa kubectx kubernetes kube-ps1
@@ -87,7 +89,7 @@ echo "Installation complete..."
 
 # Stow dotfiles packages
 echo "Stowing dotfiles..."
-stow -t ~ karabiner starship tmux sketchybar aerospace ghostty nvim 
+stow -t ~ karabiner starship tmux sketchybar aerospace ghostty nvim zsh
 
 # export gnu coreutils to path
 echo 'export PATH="/opt/homebrew/opt/coreutils/libexec/gnubin:$PATH"' >> ~/.zshrc
